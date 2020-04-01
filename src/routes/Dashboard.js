@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
+import { ApolloProvider } from 'react-apollo';
+import client from '../graphql/apollo';
+
+import Box from '../graphql/Box';
 
 class Dashboard extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentWillMount() {}
 
   render() {
-    return <div>Dashboard</div>;
+    return (
+      <ApolloProvider client={client}>
+        <div>
+          <Box color="orange" />
+        </div>
+      </ApolloProvider>
+    );
   }
 }
 
