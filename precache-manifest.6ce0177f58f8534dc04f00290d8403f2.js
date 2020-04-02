@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "578547a824bdbb40c0702fe0c880a7e5",
+    "revision": "82f62116f8d696fb726b6ba1fff7438e",
     "url": "/clpsec-game/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/clpsec-game/static/css/2.de424728.chunk.css"
   },
   {
-    "revision": "391c21c84bf755767f13",
+    "revision": "6f2da9186a8b846c6110",
     "url": "/clpsec-game/static/css/main.8d38625f.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/clpsec-game/static/js/2.7bd78e95.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "391c21c84bf755767f13",
-    "url": "/clpsec-game/static/js/main.5c268a3a.chunk.js"
+    "revision": "6f2da9186a8b846c6110",
+    "url": "/clpsec-game/static/js/main.ae9b1384.chunk.js"
   },
   {
     "revision": "91c57137cc6b682fdb3d",
