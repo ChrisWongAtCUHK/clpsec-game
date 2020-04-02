@@ -11,6 +11,11 @@ subscription getClickCount($color: String) {
   }
 }`;
 
+const colors = {
+  orange: '#ff9559',
+  blue: '#007aff',
+};
+
 const Box = (color) => (
   <Subscription
     subscription={gql`
@@ -22,8 +27,11 @@ const Box = (color) => (
       if (loading) return <p>Loading...</p>;
       if (error) return <p>Error :</p>;
       return (
-        <div>
-          <div>{data.click_game_aggregate.aggregate.count}</div>
+        <div
+          className="text-center w-25 p-3"
+          style={{ backgroundColor: colors[color.color] }}
+        >
+          {data.click_game_aggregate.aggregate.count}
         </div>
       );
     }}
