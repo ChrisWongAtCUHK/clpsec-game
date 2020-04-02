@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/clpsec-game/static/css/main.8d38625f.chunk.css",
-    "main.js": "/clpsec-game/static/js/main.b51c52a8.chunk.js",
-    "main.js.map": "/clpsec-game/static/js/main.b51c52a8.chunk.js.map",
+    "main.js": "/clpsec-game/static/js/main.5c268a3a.chunk.js",
+    "main.js.map": "/clpsec-game/static/js/main.5c268a3a.chunk.js.map",
     "runtime-main.js": "/clpsec-game/static/js/runtime-main.687b8d8d.js",
     "runtime-main.js.map": "/clpsec-game/static/js/runtime-main.687b8d8d.js.map",
     "static/css/2.de424728.chunk.css": "/clpsec-game/static/css/2.de424728.chunk.css",
     "static/js/2.7bd78e95.chunk.js": "/clpsec-game/static/js/2.7bd78e95.chunk.js",
     "static/js/2.7bd78e95.chunk.js.map": "/clpsec-game/static/js/2.7bd78e95.chunk.js.map",
     "index.html": "/clpsec-game/index.html",
-    "precache-manifest.acdd02d924eddd394cf3a581e62bd85c.js": "/clpsec-game/precache-manifest.acdd02d924eddd394cf3a581e62bd85c.js",
+    "precache-manifest.0282115c5c18b1942dfea45be285c801.js": "/clpsec-game/precache-manifest.0282115c5c18b1942dfea45be285c801.js",
     "service-worker.js": "/clpsec-game/service-worker.js",
     "static/css/2.de424728.chunk.css.map": "/clpsec-game/static/css/2.de424728.chunk.css.map",
     "static/css/main.8d38625f.chunk.css.map": "/clpsec-game/static/css/main.8d38625f.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.de424728.chunk.css",
     "static/js/2.7bd78e95.chunk.js",
     "static/css/main.8d38625f.chunk.css",
-    "static/js/main.b51c52a8.chunk.js"
+    "static/js/main.5c268a3a.chunk.js"
   ]
 }
