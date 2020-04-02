@@ -9,15 +9,9 @@ export default function App() {
       {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
       <Switch>
-        <Route path="/dashboard">
-          <Dashboard />
-        </Route>
-        <Route path="/client">
-          <Client />
-        </Route>
-        <Route path="/">
-          <Dashboard />
-        </Route>
+        <Route path="/dashboard" component={Dashboard} />
+        <Route path="/client" component={Client} />
+        <Route path="/" component={Dashboard} />
       </Switch>
     </BrowserRouter>
   );
