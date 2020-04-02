@@ -12,6 +12,7 @@ class Dashboard extends Component {
       <ApolloProvider client={client}>
         <div>
           <Box color="orange" />
+          <Box color="blue" />
         </div>
       </ApolloProvider>
     );
