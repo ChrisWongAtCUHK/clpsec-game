@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/clpsec-game/precache-manifest.619c7bc041c6703e65c36fcd4f1866b0.js"
+  "/clpsec-game/precache-manifest.2ed7ef379f67a947d8c2c231f756692d.js"
 );
 
 self.addEventListener('message', (event) => {
