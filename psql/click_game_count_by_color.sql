@@ -1,6 +1,6 @@
 DROP FUNCTION click_game_count_by_color;
 
-CREATE FUNCTION click_game_count_by_color (search_color text)
+CREATE FUNCTION click_game_count_by_color ()
   RETURNS SETOF click_game_count
   AS $$
 DECLARE
@@ -30,10 +30,7 @@ BEGIN
     AND clicked_at <= last_clicked_at 
     GROUP BY
       c.color
-  ) AS color_count
-  WHERE
-    -- $1 == search_color
-    color_count.color = $1;
+  ) AS color_count;
 END;
 $$
 LANGUAGE plpgsql STABLE;
