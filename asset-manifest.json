@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/clpsec-game/static/css/main.52c3efb1.chunk.css",
-    "main.js": "/clpsec-game/static/js/main.e7a3d3ce.chunk.js",
-    "main.js.map": "/clpsec-game/static/js/main.e7a3d3ce.chunk.js.map",
+    "main.js": "/clpsec-game/static/js/main.ae2e8757.chunk.js",
+    "main.js.map": "/clpsec-game/static/js/main.ae2e8757.chunk.js.map",
     "runtime-main.js": "/clpsec-game/static/js/runtime-main.687b8d8d.js",
     "runtime-main.js.map": "/clpsec-game/static/js/runtime-main.687b8d8d.js.map",
     "static/css/2.de424728.chunk.css": "/clpsec-game/static/css/2.de424728.chunk.css",
-    "static/js/2.08c7b751.chunk.js": "/clpsec-game/static/js/2.08c7b751.chunk.js",
-    "static/js/2.08c7b751.chunk.js.map": "/clpsec-game/static/js/2.08c7b751.chunk.js.map",
+    "static/js/2.4cc190fe.chunk.js": "/clpsec-game/static/js/2.4cc190fe.chunk.js",
+    "static/js/2.4cc190fe.chunk.js.map": "/clpsec-game/static/js/2.4cc190fe.chunk.js.map",
     "index.html": "/clpsec-game/index.html",
-    "precache-manifest.6125f51067963c2bb2be90b7522c6912.js": "/clpsec-game/precache-manifest.6125f51067963c2bb2be90b7522c6912.js",
+    "precache-manifest.cd73db7651d769d75dfeb69982471f84.js": "/clpsec-game/precache-manifest.cd73db7651d769d75dfeb69982471f84.js",
     "service-worker.js": "/clpsec-game/service-worker.js",
     "static/css/2.de424728.chunk.css.map": "/clpsec-game/static/css/2.de424728.chunk.css.map",
     "static/css/main.52c3efb1.chunk.css.map": "/clpsec-game/static/css/main.52c3efb1.chunk.css.map",
-    "static/js/2.08c7b751.chunk.js.LICENSE.txt": "/clpsec-game/static/js/2.08c7b751.chunk.js.LICENSE.txt"
+    "static/js/2.4cc190fe.chunk.js.LICENSE.txt": "/clpsec-game/static/js/2.4cc190fe.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.687b8d8d.js",
     "static/css/2.de424728.chunk.css",
-    "static/js/2.08c7b751.chunk.js",
+    "static/js/2.4cc190fe.chunk.js",
     "static/css/main.52c3efb1.chunk.css",
-    "static/js/main.e7a3d3ce.chunk.js"
+    "static/js/main.ae2e8757.chunk.js"
   ]
 }
