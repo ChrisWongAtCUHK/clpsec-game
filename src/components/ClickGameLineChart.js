@@ -136,7 +136,11 @@ function ClickGameLineChart({ click_game }) {
     >
       <CartesianGrid strokeDasharray="3 3" />
       <XAxis dataKey="name" />
-      <YAxis type="number" domain={['dataMin', 'dataMax']} />
+      <YAxis
+        type="number"
+        domain={['dataMin', 'dataMax']}
+        label={{ value: 'Click(s)', angle: -90, position: 'insideLeft' }}
+      />
       <Tooltip />
       <Legend content={renderLegend} />
       <Line
