@@ -5,6 +5,7 @@ import gql from 'graphql-tag';
 import moment from 'moment';
 
 import client from '../graphql/apollo';
+import ClickGameLineChart from '../components/ClickGameLineChart';
 import Box from '../components/Box';
 
 // realtime update data
@@ -52,28 +53,30 @@ const Dashboard = () => {
 
   return (
     <ApolloProvider client={client}>
-      <Container>
-        <Subscription subscription={SUBSCRIPTION_CLICK_GAME}>
-          {({ loading, error, data }) => {
-            if (loading) return <p>Loading...</p>;
-            if (error) return <p>Error :</p>;
-            const click_game = data['click_game_in_time_range'];
+      <Subscription subscription={SUBSCRIPTION_CLICK_GAME}>
+        {({ loading, error, data }) => {
+          if (loading) return <p>Loading...</p>;
+          if (error) return <p>Error :</p>;
+          const click_game = data['click_game_in_time_range'];
 
-            // filter by color
-            // calculate the timespan from first clicked_at in second
-            const orange_clicks = getClickCountsByColor(click_game, 'orange');
-            const blue_counts = getClickCountsByColor(click_game, 'blue');
+          // filter by color
+          // calculate the timespan from first clicked_at in second
+          const orange_clicks = getClickCountsByColor(click_game, 'orange');
+          const blue_counts = getClickCountsByColor(click_game, 'blue');
 
-            return (
-              <Row className="vh-100 justify-content-md-center align-items-center">
-                <pre>{JSON.stringify(orange_clicks, null, 2)}</pre>
+          return (
+            <Container className="vh-100">
+              <Row className="w-100">
+                <ClickGameLineChart />
+              </Row>
+              <Row className="justify-content-md-center align-items-center">
                 <Box color="orange" count={orange_clicks.length} />
                 <Box color="blue" count={blue_counts.length} />
               </Row>
-            );
-          }}
-        </Subscription>
-      </Container>
+            </Container>
+          );
+        }}
+      </Subscription>
     </ApolloProvider>
   );
 };
