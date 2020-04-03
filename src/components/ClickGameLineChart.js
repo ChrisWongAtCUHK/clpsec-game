@@ -10,25 +10,6 @@ import {
 } from 'recharts';
 import moment from 'moment';
 
-// calculate the elapsed time
-const getClickCountsByColor = (click_game, color) => {
-  const first_clicked_at =
-    click_game.length > 0 ? click_game[0]['clicked_at'] : null;
-
-  return click_game
-    .filter((c) => c.color === color)
-    .map((cc) => {
-      const duration = moment
-        .duration(moment(cc.clicked_at).diff(moment(first_clicked_at)))
-        .as('seconds');
-
-      return {
-        color: cc.color,
-        second: duration,
-      };
-    });
-};
-
 // line chart data
 const line_chart_data = [
   {

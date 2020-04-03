@@ -25,17 +25,15 @@ const getClickCountsByColor = (click_game, color) => {
 
 const Dashboard = () => {
   // The game can be reset when the page is refreshed
-  // client
-  //   .mutate({
-  //     mutation: gql`
-  //       mutation deleteAllClicks {
-  //         delete_click_game(where: {}) {
-  //           affected_rows
-  //         }
-  //       }
-  //     `,
-  //   })
-  //   .then((result) => console.log(result));
+  client.mutate({
+    mutation: gql`
+      mutation deleteAllClicks {
+        delete_click_game(where: {}) {
+          affected_rows
+        }
+      }
+    `,
+  });
 
   return (
     <ApolloProvider client={client}>
