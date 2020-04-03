@@ -1,8 +1,7 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
-
 import { Mutation } from 'react-apollo';
 import gql from 'graphql-tag';
+import './CircleBtn.css';
 
 const MUTATION_INSERT_CLICK_GAME = gql`
   mutation insertClickGame($color: String) {
@@ -24,16 +23,19 @@ const CircleBtn = ({ color }) => {
       onError={onMutationError}
     >
       {(insertClickGame) => (
-        <Button
-          onClick={(e) => {
-            e.preventDefault();
-            insertClickGame({
-              variables: { color },
-            });
-          }}
-        >
-          {color}
-        </Button>
+        <div className={`text-center p-3`}>
+          <button
+            className={`circle-btn ${color}`}
+            onClick={(e) => {
+              e.preventDefault();
+              insertClickGame({
+                variables: { color },
+              });
+            }}
+          >
+            {color === 'orange' ? '-' : '+'}
+          </button>
+        </div>
       )}
     </Mutation>
   );
