@@ -1,7 +1,7 @@
-DROP FUNCTION click_game_count_by_color;
+DROP FUNCTION IF EXISTS click_game_in_time_range;
 
-CREATE FUNCTION click_game_count_by_color ()
-  RETURNS SETOF click_game_count
+CREATE FUNCTION click_game_in_time_range ()
+  RETURNS SETOF click_game
   AS $$
 DECLARE
   last_clicked_at timestamp;
@@ -13,24 +13,9 @@ BEGIN
     click_game;
   -- count with color and timestamp filters
   RETURN QUERY
-  SELECT
-    *
-  FROM 
-  (
-    SELECT 
-      c.color, count(click_game.color)
-    FROM 
-    (
-      SELECT 'blue' AS color
-      UNION
-      SELECT 'orange' AS color
-    ) AS c
-    LEFT JOIN click_game ON c.color = click_game.color
-    -- filtered by the timestamp to be 5 seconds after first click
-    AND clicked_at <= last_clicked_at 
-    GROUP BY
-      c.color
-  ) AS color_count;
+    SELECT
+      *
+    FROM click_game WHERE clicked_at <= last_clicked_at;
 END;
 $$
 LANGUAGE plpgsql STABLE;
