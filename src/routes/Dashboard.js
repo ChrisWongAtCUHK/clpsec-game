@@ -2,7 +2,6 @@ import React from 'react';
 import { Container, Row } from 'react-bootstrap';
 import { ApolloProvider, Subscription } from 'react-apollo';
 import gql from 'graphql-tag';
-import moment from 'moment';
 
 import client from '../graphql/apollo';
 import ClickGameLineChart from '../components/ClickGameLineChart';
@@ -19,22 +18,9 @@ const SUBSCRIPTION_CLICK_GAME = gql`
   }
 `;
 
-// calculate the elapsed time
+//  group by color
 const getClickCountsByColor = (click_game, color) => {
-  const first_clicked_at =
-    click_game.length > 0 ? click_game[0]['clicked_at'] : null;
-
-  return click_game
-    .filter((c) => c.color === color)
-    .map((cc) => {
-      const duration = moment
-        .duration(moment(cc.clicked_at).diff(moment(first_clicked_at)))
-        .as('seconds');
-      return {
-        color: cc.color,
-        second: duration,
-      };
-    });
+  return click_game.filter((c) => c.color === color);
 };
 
 const Dashboard = () => {
@@ -67,7 +53,7 @@ const Dashboard = () => {
           return (
             <Container className="vh-100">
               <Row className="w-100">
-                <ClickGameLineChart />
+                <ClickGameLineChart click_game={click_game} />
               </Row>
               <Row className="justify-content-md-center align-items-center">
                 <Box color="orange" count={orange_clicks.length} />
