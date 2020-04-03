@@ -98,6 +98,10 @@ const parseLineChartData = (index, duration, color) => {
   }
 };
 
+const renderLegend = (props) => {
+  return <div className="d-flex justify-content-center">Second(s)</div>;
+};
+
 // function component
 function ClickGameLineChart({ click_game }) {
   const first_clicked_at =
@@ -127,7 +131,7 @@ function ClickGameLineChart({ click_game }) {
       <XAxis dataKey="name" />
       <YAxis type="number" domain={['dataMin', 'dataMax']} />
       <Tooltip />
-      <Legend />
+      <Legend content={renderLegend} />
       <Line
         type="monotone"
         dataKey="orange"
